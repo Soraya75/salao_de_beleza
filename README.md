@@ -1,7 +1,3 @@
-Aqui está a documentação do seu código HTML em formato Markdown:
-
----
-
 # Documentação do Código HTML: Salão de Beleza Levic
 
 Este código HTML descreve a estrutura de uma página para o "Salão de Beleza Levic", incluindo a navegação, apresentação de serviços, localização, e informações de contato. Ele utiliza recursos como o Google Maps e ícones do FontAwesome.
@@ -139,6 +135,3 @@ A seção principal contém o banner de boas-vindas, informações sobre os serv
 - Link para o arquivo JavaScript (`./assets/js/script.js`), responsável por funcionalidades interativas, como o menu hamburguer.
 
 ---
-
-## Considerações Finais
-Este código fornece uma estrutura básica para um site de um salão de beleza. Ele inclui seções principais como navegação, apresentação de serviços, localização via Google Maps e informações de contato. O layout é responsivo, utilizando práticas comuns como o botão de navegação "hamburguer" para telas menores.
