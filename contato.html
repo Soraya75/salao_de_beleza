@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/images/logo.jpg" type="image/icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Salão de Beleza Levic</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/contato.css">
+    <style>
+        /* Centraliza o título e o mapa */
+        .location {
+            text-align: center;
+            /* Centraliza o texto da seção */
+            margin: 40px 0;
+            /* Espaçamento em cima e embaixo da seção */
+            margin-top: 40px;
+            left: 50%;
+            align-items: center;
+        }
+
+        .map-container {
+            display: flex;
+            /* Usando Flexbox para centralizar */
+            justify-content: center;
+            /* Centraliza horizontalmente */
+            align-items: center;
+            /* Centraliza verticalmente */
+            margin-top: 20px;
+            /* Espaçamento acima do mapa */
+        }
+
+        iframe {
+            max-width: 100%;
+            /* O iframe não ultrapassa 100% da largura do container */
+            height: 331px;
+            /* Altura fixa do iframe */
+        }
+
+        .location-title {
+            margin-bottom: 20px;
+            /* Espaçamento abaixo do título */
+            font-size: 2rem;
+            color: #000000;
+            box-shadow: 10px 5px 5px red;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <br>
+        <img src="./assets/images/levic_logo_preto_menor.png" alt="Logo" class="logo">
+        <div class="container">
+            <button class="navbar-toggler" id="toggleButton" aria-label="Toggle navigation">
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </button>
+            <nav class="navbar" id="navbarNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./quem_somos.html" class="nav-link">Quem Somos</a></li>
+                    <li class="nav-item"><a href="./servicos.html" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="./produtos.html" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"><a href="./orcamentos.html" class="nav-link">Orçamentos</a></li>
+                    <li class="nav-item"><a href="./contato.html" class="nav-link active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h1 class="form-title">Entre em Contato</h1>
+            <div class="container">
+                <form id="contatoForm" class="orcamento-form">
+                    <div class="form-group">
+                        <label for="name">Seu Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="location">
+            <h1 class="location-title">Nossa Localização</h1>
+            <div class="map-container">
+                <iframe width="773" height="331" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Av.+Terezinha+Campos+Waack%2C+415%2C+Jardim+Alexandre+Campos%2C+Uberaba%2FMG%2C+38020-040&t=&z=20&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <img alt="Levic Salon Clinique Logo" class="footer-logo" height="160"
+                src="https://storage.googleapis.com/a1aa/image/fbM7SRf7E1u4d0ShMuV0qIF5s6X1tW719543GcG0oZnewISnA.jpg"
+                width="200" />
+            <h2 class="footer-title">Studio</h2>
+            <p>Email: <a class="footer-links"
+                    href="mailto:levicsalonclinique@hotmail.com">levicsalonclinique@hotmail.com</a></p>
+            <p>Tel: 34 3522-1880</p>
+            <p>Av. Terezinha Campos Waack, 415 - Jardim Alexandre Campos,<br> Uberaba - MG, 38020-040</p>
+            <div class="social-links">
+                <div class="social-link">
+                    <i class="fab fa-twitter"></i>
+                    <a class="footer-links" href="">Siga no Twitter</a>
+                </div>
+                <div class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <a class="footer-links" href="">Siga no Instagram</a>
+                </div>
+                <div class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    <a class="footer-links" href="">Acompanhe no Facebook</a>
+                </div>
+            </div>
+            <div class="salon-hours">
+                <h2 class="hours-title">Horário | Salão</h2>
+                <p>Segunda à sábado: 9h às 18h;</p>
+                <p>Agende online no link abaixo:</p>
+                <div>
+                    <a href="./orcamentos.html"><button class="botao">Agende Online</button></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/validar_form.js"></script>
+</body>
+</html>

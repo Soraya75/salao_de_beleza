@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="./assets/images/logo.jpg" type="image/icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salão de Beleza Levic</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-gray">
+    <header class="header">
+        <br>
+        <img src="./assets/images/levic_logo_preto_menor.png" alt="Logo" class="logo">
+        <div class="container">
+            <button class="navbar-toggler" id="toggleButton" aria-label="Toggle navigation">
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </button>
+            <nav class="navbar" id="navbarNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="./quem_somos.html" class="nav-link">Quem Somos</a></li>
+                    <li class="nav-item"><a href="./servicos.html" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="./produtos.html" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"><a href="./orcamentos.html" class="nav-link">Orçamentos</a></li>
+                    <li class="nav-item"><a href="./contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="banner">
+            <h1 class="banner-title">Bem-vindo ao Salão Levic!</h1>
+            <p class="banner-description">Onde transformamos sua beleza com nossos serviços, tudo com carinho e
+                profissionalismo!</p>
+            <br>
+            <a class="cta-button" href="./orcamentos.html">Reserve Seu Momento</a>
+        </section>
+        <br><br>
+        <section class="services">
+            <div class="container">
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="./assets/images/service1.png" alt="Serviço 1" class="service-image">
+                        <h3 class="service-title">Fazemos Cabelos e Penteados.</h3>
+                        <p class="service-description">Oferecemos serviços especializados em cabelos e penteados,
+                            transformando seu visual com estilo e criatividade.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./assets/images/service2.png" alt="Serviço 2" class="service-image">
+                        <h3 class="service-title">Fazemos Manicure e Pedicure.</h3>
+                        <p class="service-description">Oferecemos serviços de manicure e pedicure para deixar suas unhas
+                            sempre impecáveis.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./assets/images/service3.png" alt="Serviço 3" class="service-image">
+                        <h3 class="service-title">Fazemos Maquiagens Profissionais.</h3>
+                        <p class="service-description">Oferecemos maquiagens profissionais que realçam sua beleza
+                            natural e atendem a todas as ocasiões.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./assets/images/service4.png" alt="Serviço 4" class="service-image">
+                        <h3 class="service-title">Fazemos Massagens.</h3>
+                        <p class="service-description">Oferecemos uma variedade de massagens para promover relaxamento e
+                            bem-estar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location">
+            <h1 class="location-title">Nossa Localização</h1>
+            <div class="map-container">
+                <iframe width="773" height="331" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Av.+Terezinha+Campos+Waack%2C+415%2C+Jardim+Alexandre+Campos%2C+Uberaba%2FMG%2C+38020-040&t=&z=20&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <footer class="footer">
+        <div class="footer-container">
+            <img alt="Levic Salon Clinique Logo" class="footer-logo" height="160"
+                src="https://storage.googleapis.com/a1aa/image/fbM7SRf7E1u4d0ShMuV0qIF5s6X1tW719543GcG0oZnewISnA.jpg"
+                width="200" />
+            <h2 class="footer-title">Studio</h2>
+            <p>Email:<a class="footer-links"
+                    href="mailto:levicsalonclinique@hotmail.com">levicsalonclinique@hotmail.com</a></p>
+            <p>Tel: 34 3522-1880</p>
+            <p>Av. Terezinha Campos Waack, 415 - Jardim Alexandre Campos,<br> Uberaba - MG, 38020-040</p>
+            <div class="social-links">
+                <div class="social-link">
+                    <i class="fab fa-twitter"></i>
+                    <a class="footer-links" href="">Siga no Twitter</a>
+                </div>
+                <div class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <a class="footer-links" href="">Siga no Instagram</a>
+                </div>
+                <div class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    <a class="footer-links" href="">Acompanhe no Facebook</a>
+                </div>
+            </div>
+            <div class="salon-hours">
+                <h2 class="hours-title">Horário | Salão</h2>
+                <p>Segunda à sábado: 9h às 18h;</p>
+                <p>Agende online no link abaixo:</p>
+                <br>
+                <div>
+                    <a href="./orcamentos.html"><button class="cta-button">Agende Online</button></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

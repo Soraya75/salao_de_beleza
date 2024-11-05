@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/images/logo.jpg" type="image/icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamentos - Salão de Beleza Levic</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/orcamentos.css">
+</head>
+
+<body class="fundo">
+    <header class="header">
+        <br>
+        <img src="./assets/images/levic_logo_preto_menor.png" alt="Logo" class="logo">
+        <div class="container">
+            <button class="navbar-toggler" id="toggleButton" aria-label="Toggle navigation">
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </button>
+            <nav class="navbar" id="navbarNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./quem_somos.html" class="nav-link">Quem Somos</a></li>
+                    <li class="nav-item"><a href="./servicos.html" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="./produtos.html" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"><a href="./orcamentos.html" class="nav-link active">Orçamentos</a></li>
+                    <li class="nav-item"><a href="./contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h1 class="form-title">Solicite Seu Orçamento</h1>
+            <div class="container">
+                <form class="orcamento-form" id="orcamentoForm">
+                    <div class="form-group">
+                        <label for="name">Seu Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Seu Telefone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Serviço Desejado:</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Selecione um serviço</option>
+                            <option value="corte">Corte de Cabelo</option>
+                            <option value="coloracao">Coloração</option>
+                            <option value="maquiagem">Maquiagem</option>
+                            <option value="manicure">Manicure</option>
+                            <option value="massagem">Massagem</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_receber">Email para Receber Orçamentos:</label>
+                        <input type="email" id="email_receber" name="email_receber" required>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar Orçamento</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <img alt="Levic Salon Clinique Logo" class="footer-logo" height="160"
+                src="https://storage.googleapis.com/a1aa/image/fbM7SRf7E1u4d0ShMuV0qIF5s6X1tW719543GcG0oZnewISnA.jpg"
+                width="200" />
+            <h2 class="footer-title">Studio</h2>
+            <p>Email: <a class="footer-links"
+                    href="mailto:levicsalonclinique@hotmail.com">levicsalonclinique@hotmail.com</a></p>
+            <p>Tel: 34 3522-1880</p>
+            <p>Av. Terezinha Campos Waack, 415 - Jardim Alexandre Campos,<br> Uberaba - MG, 38020-040</p>
+            <div class="social-links">
+                <div class="social-link">
+                    <i class="fab fa-twitter"></i>
+                    <a class="footer-links" href="">Siga no Twitter</a>
+                </div>
+                <div class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <a class="footer-links" href="">Siga no Instagram</a>
+                </div>
+                <div class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    <a class="footer-links" href="">Acompanhe no Facebook</a>
+                </div>
+            </div>
+            <div class="salon-hours">
+                <h2 class="hours-title">Horário | Salão</h2>
+                <p>Segunda à sábado: 9h às 18h;</p>
+                <p>Agende online no link abaixo:</p>
+                <div>
+                    <a href="./orcamentos.html"><button class="botao">Agende Online</button></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/validar_form.js"></script>
+</body>
+</html>

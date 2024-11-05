@@ -1,0 +1,491 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    overflow-x: hidden;
+    /* Evita rolagem horizontal */
+
+    width: 100%;
+    height: 100%;
+    --s: 105px;
+    /* control the size */
+    --c1: #ff9999;
+    /* Um vermelho claro */
+    --c2: #ffcccc;
+    /* Um vermelho ainda mais claro */
+    --c3: #ffe6e6;
+    /* Um tom muito suave de vermelho */
+
+    background: conic-gradient(from 75deg,
+            var(--c1) 15deg,
+            var(--c2) 0 30deg,
+            #0000 0 180deg,
+            var(--c2) 0 195deg,
+            var(--c1) 0 210deg,
+            #0000 0) calc(0.5 * var(--s)) calc(0.5 * var(--s) / 0.577),
+        conic-gradient(var(--c1) 30deg,
+            var(--c3) 0 75deg,
+            var(--c1) 0 90deg,
+            var(--c2) 0 105deg,
+            var(--c3) 0 150deg,
+            var(--c2) 0 180deg,
+            var(--c3) 0 210deg,
+            var(--c1) 0 256deg,
+            var(--c2) 0 270deg,
+            var(--c1) 0 286deg,
+            var(--c2) 0 331deg,
+            var(--c3) 0);
+    background-size: var(--s) calc(var(--s) / 0.577);
+    /* 0.577=tan(30deg)*/
+}
+
+/* CSS para o Modal */
+.modal {
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Fixo na tela */
+    z-index: 1000;
+    /* Acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 80%;
+    /* Largura total */
+    height: 80%;
+    /* Altura total */
+    overflow: auto;
+    /* Adiciona rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    /* Fundo branco */
+    margin: 15% auto;
+    /* Margens automáticas */
+    padding: 20px;
+    border: 1px solid #888;
+    /* Borda cinza */
+    width: 80%;
+    /* Largura do modal */
+    max-width: 600px;
+    /* Largura máxima */
+}
+
+.close-button {
+    color: #aaa;
+    /* Cor da letra do botão de fechar */
+    float: right;
+    /* Alinhamento à direita */
+    font-size: 28px;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Peso da fonte */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    /* Cor ao passar o mouse */
+    text-decoration: none;
+    /* Remove sublinhado */
+    cursor: pointer;
+    /* Cursor pointer */
+}
+
+.modal-image {
+    max-width: 100%;
+    /* Imagem responsiva */
+    height: auto;
+    /* Mantém proporção */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    /* Mudado para coluna para melhor estrutura */
+}
+
+/* Estilo do cabeçalho */
+.header {
+    position: static;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.logo {
+    height: 48px;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+/* Estilo do menu principal */
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    color: #e53e3e;
+}
+
+/* Estilos para o botão hamburguer */
+.navbar-toggler {
+    display: none;
+    /* Inicialmente oculto */
+}
+
+.hamburguer {
+    display: block;
+    width: 40px;
+    /* Aumentar a largura */
+    height: 4px;
+    /* Aumentar a altura */
+    background-color: #4a5568;
+    margin: 6px 0;
+    /* Aumentar a margem entre os elementos do botão */
+    border-radius: 2px;
+    /* Bordas arredondadas */
+    transition: all 0.3s ease;
+}
+
+/* Estilo da seção de introdução */
+.intro-section {
+    padding: 9px 0;
+    text-align: center;
+}
+
+.intro-title {
+    font-size: 2rem;
+    color: #000000;
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #a0144e;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.562);
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px red;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Estilo da seção de produtos */
+.products-section {
+    padding: 20px 0;
+}
+
+.product-category {
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    /* Fundo branco para as categorias */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #4a5568;
+    /* Cor do título da categoria */
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Aumentado para mais espaçamento */
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(51% - 20px);
+    text-align: center;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-title {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.product-price {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #e53e3e;
+    /* Cor do preço */
+}
+
+/* Estilo do botão */
+.cta-button {
+    background-color: #bd403c;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    border: none;
+    border-radius: 6em;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #e97267;
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    border-radius: 30px;
+    width: 150px;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #e53e3e;
+    /* Cor desejada quando ativo */
+    font-weight: bold;
+    /* Para destacar ainda mais */
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Horários */
+.hours-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        /* Altera para 100% */
+        padding: 0 10px;
+        /* Reduz padding */
+        flex-direction: column;
+        /* Empilha elementos */
+    }
+
+    .header {
+        padding: 10px 15px;
+        /* Ajusta o padding do cabeçalho */
+    }
+
+    .navbar-toggler {
+        display: block;
+        /* Mostrar navbar quando ativo */
+    }
+
+    .nav-list {
+        display: none;
+        /* Oculte a lista inicialmente */
+        flex-direction: column;
+        /* Alinha em coluna */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        /* Largura total */
+        background-color: #ffffff;
+        /* Fundo branco */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 9;
+    }
+
+    .navbar.active .nav-list {
+        display: flex;
+        /* Exibir a lista quando ativa */
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        /* Margem entre itens */
+        width: 100%;
+        /* Largura total dos itens */
+    }
+
+    .nav-link {
+        padding: 15px;
+        /* Padding para links */
+        display: block;
+        /* Ocupa total do espaço */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .main {
+        padding-top: 80px;
+        /* Espaço para o cabeçalho fixo */
+    }
+
+    .banner-title {
+        font-size: 6vw;
+        /* Ajuste proporcional ao viewport */
+    }
+
+    .banner-description {
+        font-size: 4vw;
+        /* Ajuste proporcional ao viewport */
+        padding: 10px 20px;
+        /* Ajusta padding */
+    }
+
+    .service-card {
+        width: 90%;
+        /* Reduz a largura das cartas de serviço */
+        max-width: 300px;
+        /* Define uma largura máxima */
+        margin: 0 auto;
+        /* Centraliza */
+    }
+
+    .map-container iframe {
+        width: 100%;
+        /* Responsivo */
+        height: auto;
+        /* Mantém proporção */
+        max-height: 300px;
+        /* Altura máxima */
+    }
+
+    .footer-container {
+        padding: 10px;
+        /* Reduz padding do footer */
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+        /* Tamanho menor no footer */
+    }
+
+    .hours-title {
+        font-size: 1.2rem;
+        /* Ajusta o tamanho do horário */
+    }
+
+    .product-card {
+        width: calc(100% - 20px);
+        /* Um produto por linha em telas pequenas */
+    }
+
+    .product-grid {
+        gap: 20px;
+        /* Mais espaçamento em telas menores */
+    }
+}
+
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) {
+    .navbar {
+        display: flex;
+        /* Mostrar navbar para telas grandes */
+    }
+
+    .nav-list {
+        display: flex;
+        /* Exibir a lista como flex */
+        list-style: none;
+        /* Remove marcadores */
+        padding: 0;
+        /* Sem padding */
+    }
+
+    .nav-item {
+        margin-left: 20px;
+        /* Margem entre os itens */
+    }
+
+    .nav-link {
+        color: #4a5568;
+        /* Cor padrão dos links */
+        text-decoration: none;
+        /* Remove sublinhado */
+        padding: 10px 15px;
+        /* Padding dos links */
+    }
+
+    .nav-link:hover {
+        color: #e53e3e;
+        /* Cor ao passar o mouse */
+    }
+}
